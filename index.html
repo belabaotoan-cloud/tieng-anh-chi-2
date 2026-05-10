@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Học Tiếng Anh Cùng Chị Hai</title>
+    <style>
+        :root { --primary: #2e86de; --dark: #222f3e; --light: #f5f6fa; }
+        body { font-family: 'Arial', sans-serif; background: var(--light); margin: 0; display: flex; }
+        
+        /* Sidebar */
+        .sidebar { width: 250px; background: var(--dark); color: white; height: 100vh; padding: 20px; position: fixed; }
+        .sidebar h2 { color: var(--primary); font-size: 1.2rem; }
+        .sidebar ul { list-style: none; padding: 0; }
+        .sidebar li { padding: 12px 0; border-bottom: 1px solid #34495e; cursor: pointer; }
+        .sidebar li:hover { color: var(--primary); }
+
+        /* Main Content */
+        .main { margin-left: 280px; padding: 40px; width: 100%; }
+        .video-container { background: #000; border-radius: 10px; overflow: hidden; margin-bottom: 30px; box-shadow: 0 4px 15px rgba(0,0,0,0.2); }
+        iframe { width: 100%; height: 450px; border: none; }
+
+        .quiz-section { background: white; padding: 25px; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
+        .question { font-weight: bold; margin-bottom: 15px; display: block; }
+        .option { display: block; margin: 10px 0; padding: 10px; border: 1px solid #ddd; border-radius: 5px; cursor: pointer; transition: 0.2s; }
+        .option:hover { background: #e1f0ff; border-color: var(--primary); }
+        button#submit { background: var(--primary); color: white; border: none; padding: 12px 25px; border-radius: 5px; cursor: pointer; margin-top: 20px; }
+    </style>
+</head>
+<body>
+
+    <div class="sidebar">
+        <h2>KHÓA HỌC</h2>
+        <ul>
+            <li>📌 Bài 1: Hello & Goodbye</li>
+            <li>📌 Bài 2: Numbers & Colors</li>
+            <li>📌 Bài 3: My Family</li>
+            <li>📝 Kiểm tra giữa kỳ</li>
+        </ul>
+    </div>
+
+    <div class="main">
+        <h1>Bài 1: Greetings (Chào hỏi)</h1>
+        
+        <!-- Khu vực xem Video -->
+        <div class="video-container">
+            <!-- Thay mã video YouTube vào đây -->
+            <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" allowfullscreen></iframe>
+        </div>
+
+        <!-- Khu vực làm bài tập -->
+        <div class="quiz-section">
+            <h3>Làm bài tập củng cố</h3>
+            <span class="question">1. How do you say "Xin chào" in English?</span>
+            <label class="option"><input type="radio" name="q1"> Good morning</label>
+            <label class="option"><input type="radio" name="q1"> Hello</label>
+            <label class="option"><input type="radio" name="q1"> Goodbye</label>
+
+            <button id="submit" onclick="checkAnswer()">Nộp bài</button>
+        </div>
+    </div>
+
+    <script>
+        function checkAnswer() {
+            alert("Đã ghi nhận bài làm! Chị Hai sẽ chấm điểm cho em sau nhé.");
+        }
+    </script>
+</body>
+</html>
